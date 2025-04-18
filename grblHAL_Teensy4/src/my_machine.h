@@ -24,7 +24,7 @@
 // NOTE: Only one board may be enabled!
 // If none is enabled pin mappings from generic_map.h will be used
 //#define BOARD_T40X101
-//#define BOARD_T41U5XBB
+  #define BOARD_T41U5XBB
 //#define BOARD_T41U5XBB_SS // For a modified T41U5XBB board, allows spindle sync to be enabled.
 //#define BOARD_T41BB5X_PRO
 //#define BOARD_CNC_BOOSTERPACK
@@ -35,17 +35,17 @@
 // Uncomment to enable, for some a value > 1 may be assigned, if so the default value is shown.
 
 /*
-              Plugin: | ETHERNET¹ | SDCARD¹ | KEYPAD | EEPROM | N_AXIS |
+              Plugin: | ETHERNETï¿½ | SDCARDï¿½ | KEYPAD | EEPROM | N_AXIS |
 ----------------------|-----------|---------|--------|--------|--------|
-BOARD_T40X101         | no        | no      | yes    | yes³   | max 4  |
-BOARD_T41U5XBB        | yes       | yes     | yes    | yes³   | max 5  |
+BOARD_T40X101         | no        | no      | yes    | yesï¿½   | max 4  |
+BOARD_T41U5XBB        | yes       | yes     | yes    | yesï¿½   | max 5  |
 BOARD_T41BB5X_PRO     | yes       | yes     | yes    | yes    | max 5  |
-BOARD_CNC_BOOSTERPACK | yes²      | yes     | yes    | yes    | max 3  |
+BOARD_CNC_BOOSTERPACK | yesï¿½      | yes     | yes    | yes    | max 3  |
 BOARD_GRBLHAL2000     | yes       | yes     | yes    | yes    | max 5  |
 
-¹ Teensy 4.1 only
-² External magjack.
-³ EEPROM is optional and must be added to the board.
+ï¿½ Teensy 4.1 only
+ï¿½ External magjack.
+ï¿½ EEPROM is optional and must be added to the board.
 
 N_AXIS has a default value of 3, edit grbl\config.h to increase.
 
@@ -85,11 +85,12 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define PLASMA_ENABLE           1 // Plasma/THC plugin. To be completed.
 //#define PPI_ENABLE              1 // Laser PPI plugin. To be completed.
 //#define LASER_COOLANT_ENABLE    1 // Laser coolant plugin. To be completed.
-//#define LASER_OVD_ENABLE        1 // Enable M-code for overdrive PWM output during spindle off in RPM controlled mode.
-//#define LB_CLUSTERS_ENABLE      1 // LaserBurn cluster support.
+  #define LASER_OVD_ENABLE        1 // Enable M-code for overdrive PWM output during spindle off in RPM controlled mode.
+  #define LB_CLUSTERS_ENABLE      1 // LaserBurn cluster support.
 //#define ODOMETER_ENABLE         1 // Odometer plugin.
 //#define OPENPNP_ENABLE          1 // OpenPNP plugin. To be completed.
 //#define FANS_ENABLE             1 // Enable fan control via M106/M107. Enables fans plugin.
+  #define STATUS_LIGHT_ENABLE     1 // RGB Status Light Plugin, uses three aux outs to provide visual status via RGB LED light strip
 //#define EEPROM_ENABLE          16 // I2C EEPROM/FRAM support. Set to 16 for 2K, 32 for 4K, 64 for 8K, 128 for 16K and 256 for 16K capacity.
 //#define EEPROM_IS_FRAM          1 // Uncomment when EEPROM is enabled and chip is FRAM, this to remove write delay.
 //#define SPINDLE_SYNC_ENABLE     1 // Enable spindle sync support (G33, G76). !! NOTE: Alpha quality - enable only for test or verification.
@@ -102,7 +103,7 @@ N_AXIS has a default value of 3, edit grbl\config.h to increase.
 //#define EVENTOUT_ENABLE         1 // Enable binding events (triggers) to control auxiliary outputs.
 //#define ESP_AT_ENABLE           1 // Enable support for Telnet communication via UART connected ESP32 running ESP-AT.
 //#define FEED_OVERRIDE_ENABLE    1 // Enable M200 feed override control.
-//#define HOMING_PULLOFF_ENABLE   1 // Enable per axis homing pulloff distance settings.
+  #define HOMING_PULLOFF_ENABLE   1 // Enable per axis homing pulloff distance settings.
 
 // IO expanders:
 //
